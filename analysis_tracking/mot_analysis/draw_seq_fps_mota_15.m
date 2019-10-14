@@ -41,20 +41,20 @@ density = {
 };
 
 set(gcf, 'Position', [500, 300, 350, 300])
-plot(cell2mat(fps)',cell2mat(mota)', 'r*');
+plot(cell2mat(fps)',cell2mat(mota)', 'k*');
 xlabel('FPS');
 ylabel('MOTA');
 title('FPS - MOTA');
 axis([0 35 8 72]);
 grid minor;
-saveas(gca, 'pic/seq_fps_mota.bmp');
+saveas(gca, 'analysis_tracking/mot_analysis/seq_fps_mota.bmp');
 
 figure
 set(gcf, 'Position', [500, 300, 350, 300])
-plot(cell2mat(density)',cell2mat(mota)', 'b*');
+plot(cell2mat(density)',cell2mat(mota)', 'k*');
 xlabel('DENSITY');
 ylabel('MOTA');
 title('DENSITY - MOTA');
 axis([0 25 8 72]);
 grid minor;
-saveas(gca, 'pic/seq_density_mota.bmp');
+saveas(gca, 'analysis_tracking/mot_analysis/seq_density_mota.bmp');

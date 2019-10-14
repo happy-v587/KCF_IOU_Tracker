@@ -2,9 +2,9 @@ function draw_bar_iou_sort_kcf
 
     close all;
       
-    iou = readEval('3thpart/iou-tracker/result/eval.txt');
-    sort = readEval('3thpart/sort/output/eval.txt');
-    kcf = readEval('result/det-faster-rcnn/train/k8-s40-c0.9/eval.txt');
+    iou = readEval('src_sort_iou/iou-tracker/result/eval.txt');
+    sort = readEval('src_sort_iou/sort/output/eval.txt');
+    kcf = readEval('F:/mot/kcf_iou/result/det-faster-rcnn/train/k8-s40-c0.9/eval.txt');
     
     name = {'MOTA', 'MOTP', 'MT', 'ML', 'IDS', 'FP', 'FN', 'FAF'};
     y_show = [
@@ -37,7 +37,7 @@ function draw_bar_iou_sort_kcf
         text(a+0.25, y_show(i,2)+2, num2str(y(i,2), scale), 'FontSize', 10);
         text(a+0.45, y_show(i,3)+2, num2str(y(i,3), scale), 'FontSize', 10);
     end
-    
+    colormap gray;
     set(gca, 'XTickLabel', name);
     set(gca, 'Position',[0.05 0.1 0.92 0.85]);        
 %     grid
@@ -47,7 +47,7 @@ function draw_bar_iou_sort_kcf
     xlabel('Evaluation metrics');
     ylabel('Conversion to Unified Scope');
     axis([0 9 0 85]);
-    saveas(gcf, 'pic/bar-iou-ssort-kcf.bmp');  
+    saveas(gcf, 'analysis_tracking/mot_analysis/bar-iou-sort-kcf.bmp');  
 
     function [out] = readEval(path)
          % IDF1   IDP   IDR| Rcll   Prcn    FAR|   GT  MT    PT    ML|    FP    FN    IDs     FM|  MOTA   MOTP  MOTAL  

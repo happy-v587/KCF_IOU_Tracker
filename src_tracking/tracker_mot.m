@@ -1,4 +1,4 @@
-function tracker(seq, param)
+function tracker_mot(seq, param)
 %% tracker
 % 已经完成的工作：
 %   1. 使用Faster-RCNN 检测目标

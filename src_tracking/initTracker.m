@@ -18,9 +18,17 @@ function tracker = initTracker(img, rect, id)
                
         tracker.features.gray = false;
         tracker.features.hog = false;
+        tracker.features.rgb = false;
         
         switch feature_type
         case 'gray',
+            tracker.interp_factor = 0.075;  %linear interpolation factor for adaptation
+            tracker.kernel.sigma = 0.2;  %gaussian kernel bandwidth
+            tracker.kernel.poly_a = 1;  %polynomial kernel additive term
+            tracker.kernel.poly_b = 7;  %polynomial kernel exponent
+            tracker.features.gray = true;
+            tracker.cell_size = 9;
+        case 'rgb',
             tracker.interp_factor = 0.075;  %linear interpolation factor for adaptation
             tracker.kernel.sigma = 0.2;  %gaussian kernel bandwidth
             tracker.kernel.poly_a = 1;  %polynomial kernel additive term
