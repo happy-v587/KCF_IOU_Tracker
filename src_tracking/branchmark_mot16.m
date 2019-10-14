@@ -33,17 +33,17 @@ end
 
 %% base path
 
-obj.trainPathImages = './data/tracking/MOT16/train/%s/img1/%s.jpg';
+obj.trainPathImages = '../data/tracking/MOT16/train/%s/img1/%s.jpg';
 obj.testPathImages  = './data/tracking/MOT16/test/%s/img1/%s.jpg';
 
-obj.trainPathGt     = './data/tracking/MOT16/train/%s/gt/gt.txt';
+obj.trainPathGt     = '../data/tracking/MOT16/train/%s/gt/gt.txt';
 
 %% result path
 
 if param.is_train
         
-    obj.trainPathDet = './data/tracking/MOT16/train/%s/det/det.txt';    
-    obj.resultPath = sprintf('result1/det-base-mot16/train/k%.0f-s%.0f-c%.1f', ...
+    obj.trainPathDet = '../data/tracking/MOT16/train/%s/det/det.txt';    
+    obj.resultPath = sprintf('../result1/det-base-mot16/train/k%.0f-s%.0f-c%.1f', ...
        param.t_track, param.t_same, param.det_score);
     
 %     obj.trainPathDet = 'data/faster-rcnn/train/%s.txt';
