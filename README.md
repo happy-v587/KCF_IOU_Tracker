@@ -42,3 +42,8 @@
 
 - master分支：仅为demo演示
 - backup分支：是最全面的分支，包括绘图、数据分析等代码
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/HappyUncle/KCF_IOU_Tracker.svg)](https://starchart.cc/HappyUncle/KCF_IOU_Tracker)
+    
